@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>input</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+			width: 100%;
+			margin: 0px auto;
+			display: flex;
+			justify-content: center;
+		}
+		.chech-number{
+			margin-top: 50px;
+		}
+		span:hover{
+			color: #ffcc00;
+			transition: ease-in 0.3s;
+		}
+		input{
+			padding: 3px;
+		}
+		i{
+			padding: 5px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="chech-number">
+		<span class="minus" onclick="minus()"><i class="fa fa-minus"></i></span>
+		<input type="text" name="number" id="number" value="0">
+		<span id="plus1" onclick="plus()"><i class="fa fa-plus"></i></span>
+	</div>
+	<script type="text/javascript">
+		function plus() {
+			var number = document.getElementById('number').value;
+			var count = 0;
+			for(var i = 0;i <= number;i++){
+				count++;
+			}
+			document.getElementById('number').setAttribute("value",count);
+		}
+		function minus() {
+			var number = document.getElementById('number').value;
+			for (var i = 0; i <= number;i++) {
+				 var minus1 = i;
+			}
+			minus1--;
+			if(minus1 >= 0){
+				document.getElementById('number').setAttribute("value",minus1);
+			} else {
+				document.getElementById('number').setAttribute("value",0);
+			}
+		}
+	</script>
+</body>
+</html>

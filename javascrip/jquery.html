@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Use Jquery</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+			width: 100%;
+			margin: 0px auto;
+			display: flex;
+			justify-content: center;
+		}
+		.chech-number{
+			margin-top: 50px;
+		}
+		span:hover{
+			color: #ffcc00;
+			transition: ease-in 0.3s;
+		}
+		input{
+			padding: 3px;
+		}
+		i{
+			padding: 5px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="chech-number">
+		<span class="minus"><i class="fa fa-minus"></i></span>
+		<input type="text" name="number" id="number" value="0">
+		<span class="plus"><i class="fa fa-plus"></i></span>
+	</div>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.plus').click(function () {
+				var count = 0;
+				for(var i = 0;i <= $('#number').val();i++){
+					count++;
+				}
+				$('#number').attr('value',count);
+			});
+			$('.minus').click(function () {
+				var count = 0;
+				for(var i = 0;i <= $('#number').val();i++){
+					count = i;
+				}
+				count--;
+				if(count >= 0){
+					$('#number').attr('value',count);
+				} else {
+					$('#number').attr('value',0);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
