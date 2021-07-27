@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Ajax</title>
+	<style type="text/css">
+		body{
+			margin: 50px 0 0 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="ajax1"></div>
+	<div class="ajax2"></div>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$.getJSON( "https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367", function( data ) {
+				var items = [];
+				var time = [];
+
+				$.each( data.Data, function( key, value ) {
+			    	items.push( "<li id='" + key + "'>"
+			    		+ value.Code + "<br>" 
+			    		+ value.NameEng + "<br>"
+			    		+ value.NameTChi + "<br>"
+			    		+ value.NameSChi + "<br>"
+			    		+ value.Nominal + "<br>"
+			    		+ value.Change + "<br>"
+				    	+ value.Bid + "<br>"
+				    	+ value.Ask + "<br>"
+				    	+ value["%Change"] + "<br>"
+				    	+ value.PrevClose + "<br>"
+				    	+ value["P/ERatio"] + "<br>"
+				    	+ value["%Yield"] + "<br>"
+				    	+ value.Spread + "<br>"
+				    	+ value.MarketCap + "<br>"
+				    	+ value["52WkHigh"] + "<br>"
+				    	+ value.Lot + "<br>"
+				    	+ value["52WkLow"] + "<br><li>"
+				    );
+				});
+				$( "<ul/>", {
+			    	"class": "my-new-list",
+			    	html: items.join( "" )
+				}).appendTo( "body" );
+
+				$.each( data, function( key, value ) {
+			    	time.push( "<li id='" + key + "'>" + value+ "</li>" );
+				});
+				
+				$( "<ul/>", {
+				    "class": "my-new-list",
+				    html: time.join( "" )
+				}).appendTo( "body" );
+			});
+		});
+	</script>
+</body>
+</html>
