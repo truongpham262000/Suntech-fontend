@@ -5,17 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Ajax</title>
     <style type="text/css">
-        *{
-            padding: 0px;
-            margin: 0px auto;
-            box-sizing: border-box;
-        }
         body{
-           width: 100%;
-        }
-        .container{
-            width: 80%;
-            margin: auto;
+            margin: 50px 0 0 50px;
         }
         label{
             margin-top: 50px;
@@ -39,6 +30,12 @@
         <script src="jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function () {
+                    $('.ajax1').html(this.responseText);
+                }
+                xmlhttp.open("GET","https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367");
+                xmlhttp.send();
                 $.getJSON( "https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367", function( data ) {
                     var text = "<table border='1' cellspacing='0' cellpadding='5'><tr><th>Title</th><th>Value</th></tr>";
                     for(var x in data.Data){
@@ -72,7 +69,7 @@
                         html: time.join(" ")
                     }).appendTo( "body" );
                 });
-                $("#result").load( "https://www.espn.com/olympics/summer/2020/medals?appsrc=sc&lang=en&region=us&partial=olympics&test=true&platform=abc&view=embed");
+                $("#result").load( "https://www.espn.com/olympics/summer/2020/medals?appsrc=sc&lang=en&region=us&partial=olympics&test=true&platform=abc&view=embed .olympics");
             });
         </script>
     </div>
