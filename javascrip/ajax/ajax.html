@@ -16,6 +16,9 @@
 		label:last-child{
 			margin-left: 100px;
 		}
+		.my-new-list tr:first-child{
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -32,8 +35,6 @@
 			xmlhttp.open("GET","https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367");
 			xmlhttp.send();
 			$.getJSON( "https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367", function( data ) {
-				var time = [];
-				
 				var text = "<table border='1' cellspacing='0' cellpadding='5'><tr><th>Title</th><th>Value</th></tr>";
 				for(var x in data.Data){
 					text +="<tr><td>Code:</td><td>"+data.Data[x].Code+"</td></tr>";
@@ -54,8 +55,9 @@
 					text +="<tr><td>Lot:</td><td>"+data.Data[x].Lot+"</td></tr>";
 					text +="<tr><td>52WkLow:</td><td>"+data.Data[x]["52WkLow"]+"</td></tr>";
 				}
-
 				$('.ajax3').html("<label>Title</label><label>value</label>");
+
+				var time = [];
 				$.each( data, function( key, value ) {
 			    	time.push( "<tr><td> "+ key+":"+ "</td><td>" + value+ "</td></tr>");
 				});
