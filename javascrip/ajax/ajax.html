@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Ajax</title>
+    <style type="text/css">
+        body{
+            margin: 50px 0 0 50px;
+        }
+        label{
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        label:last-child{
+            margin-left: 100px;
+        }
+        .my-new-list tr:first-child{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ajax1"></div>
+        <div class="ajax2"></div>
+        <div class="ajax3"></div>
+        <div id="result"></div>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function () {
+                    $('.ajax1').html(this.responseText);
+                }
+                xmlhttp.open("GET","https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367");
+                xmlhttp.send();
+                $.getJSON( "https://content.etnet.com.hk/content/chuang/api/json/quote.php?code=367", function( data ) {
+                    var text = "<table border='1' cellspacing='0' cellpadding='5'><tr><th>Title</th><th>Value</th></tr>";
+                    for(var x in data.Data){
+                        text +="<tr><td>Code:</td><td>"+data.Data[x].Code+"</td></tr>";
+                        text +="<tr><td>NameEng:</td><td>"+data.Data[x].NameEng+"</td></tr>";
+                        text +="<tr><td>NameTChi:</td><td>"+data.Data[x].NameTChi+"</td></tr>";
+                        text +="<tr><td>NameSChi:</td><td>"+data.Data[x].NameSChi+"</td></tr>";
+                        text +="<tr><td>Nominal:</td><td>"+data.Data[x].Nominal+"</td></tr>";
+                        text +="<tr><td>Change:</td><td>"+data.Data[x].Change+"</td></tr>";
+                        text +="<tr><td>Bid:</td><td>"+data.Data[x].Bid+"</td></tr>";
+                        text +="<tr><td>Ask:</td><td>"+data.Data[x].Ask+"</td></tr>";
+                        text +="<tr><td>%Change:</td><td>"+data.Data[x]["%Change"]+"</td></tr>";
+                        text +="<tr><td>PrevClose:</td><td>"+data.Data[x].PrevClose+"</td></tr>";
+                        text +="<tr><td>P/ERatio:</td><td>"+data.Data[x]["P/ERatio"]+"</td></tr>";
+                        text +="<tr><td>%Yield:</td><td>"+data.Data[x]["%Yield"]+"</td></tr>";
+                        text +="<tr><td>Spread:</td><td>"+data.Data[x].Spread+"</td></tr>";
+                        text +="<tr><td>MarketCap:</td><td>"+data.Data[x].MarketCap+"</td></tr>";
+                        text +="<tr><td>52WkHigh:</td><td>"+data.Data[x]["52WkHigh"]+"</td></tr>";
+                        text +="<tr><td>Lot:</td><td>"+data.Data[x].Lot+"</td></tr>";
+                        text +="<tr><td>52WkLow:</td><td>"+data.Data[x]["52WkLow"]+"</td></tr>";
+                    }
+                    $('.ajax3').html("<label>Title</label><label>value</label>").appendTo( "body" );
+
+                    var time = [];
+                    $.each( data, function( key, value ) {
+                        time.push( "<tr><td> "+ key+":"+ "</td><td>" + value+ "</td></tr>");
+                    });
+                    $('.ajax2').html(text);
+                    $("<table/>", {
+                        "class": "my-new-list",
+                        html: time.join(" ")
+                    }).appendTo( "body" );
+                });
+                $("#result").load( "https://www.espn.com/olympics/summer/2020/medals?appsrc=sc&lang=en&region=us&partial=olympics&test=true&platform=abc&view=embed .olympics");
+            });
+        </script>
+    </div>
+</body>
+</html>

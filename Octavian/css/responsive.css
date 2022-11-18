@@ -1,0 +1,164 @@
+@media only screen and (max-width:1025.98px){
+    .main_carousel_product .owl-carousel .item{
+        width: unset;
+        height: unset;
+    }
+    .main_comment_new_text{
+        left: 0;
+    }
+    .main_latest_blog_new_one_desc {
+        padding: 20px 0px 20px 0px;
+    }
+    .main_latest_blog_button {
+        padding: 70px 0 50px 0;
+    }
+    .main_latest_blog_first {
+        margin-right: 15px;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    header nav{
+        padding: 20px 0;
+    }
+    header .header_introduce{
+        padding-bottom: 50px;
+    }
+    .nav_menu ul{
+        display: none;
+    }
+    .header_search_menu .header_search_menu_search input{
+        display: none;
+    }
+    header .header_introduce .container{
+        flex-direction: column-reverse;
+    }
+    main .main_multiple_options .container{
+        flex-direction: column-reverse;
+    }
+    .main_brand_icon .container{
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .main_carousel_product{
+        padding-bottom: 50px;
+    }
+    .main_comment_new_talk{
+        flex-direction: column-reverse;
+    }
+    .main_comment_new_like_company .container {
+        padding: 30px 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .main_comment_new_like_company_desc p {
+        padding: 35px 0px 35px 0;
+    }
+    .main_comment_new_like_company_logo{
+        padding-top: 20px;
+    }
+    .main_latest_update {
+        padding: 50px 0 50px 0;
+    }
+    .main_latest_blog .container .main_latest_blog_show{
+        flex-direction: column;
+    }
+    .main_latest_blog_first{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .main_latest_blog_new{
+        width: 100%;
+    }
+    .main_contact_us{
+        padding: 50px 0;
+    }
+    .footer_link_infor{
+        padding: 50px 0;
+    }
+    .footer_link_infor .container{
+        flex-wrap: wrap;
+    }
+    .header_introduce_desc p:first-child {
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+    .header_introduce_desc p.desc_small_text {
+        padding: 20px 0px 30px 0px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        font-size: 0.8em;
+    }
+    .header_introduce_desc input{
+        width: 100%;
+    }
+    main .main_multiple_options {
+        padding: 50px 0;
+    }
+    .main_multiple_options_lorem h3 {
+        line-height: 40px;
+        font-size: 23px;
+    }
+    .main_multiple_options_lorem p {
+        max-width: 100%;
+        text-align: justify;
+        line-height: 30px;
+        padding: 30px 0 40px 0;
+    }
+    .btnGetStart{
+        width: 100%;
+    }
+    .main_brand_icon .main_brand_desc{
+        padding-left: 0px;
+    }
+    .main_brand_desc p {
+        width: 100%;
+        line-height: 30px;
+        padding: 50px 0 40px 0;
+    }
+    .main_brand_desc h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .main_subTitle_marketing h3 {
+        font-size: 22px;
+    }
+    .main_subTitle_marketing {
+        padding-bottom: 40px;
+    }
+    .owl-theme .owl-nav {
+        display: none;
+    }
+    .owl-theme .owl-dots, .owl-theme .owl-nav {
+        margin-top: 10px;
+    }
+    .main_comment_new_text {
+        padding: 30px 0 10px 0;
+    }
+    .main_comment_new_text p {
+        line-height: 30px;
+        font-size: 0.9em;
+    }
+    .main_comment_new_text p:last-child{
+        padding-top: 20px;
+    }
+    .main_comment_new_like_company_desc h3 {
+        font-size: 20px;
+    }
+    .main_latest_update h3 {
+        font-size: 30px;
+    }
+    .main_latest_blog_new .main_latest_blog_new_one{
+        flex-direction: column;
+    }
+    .main_contact_us .container h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .main_contact_us .container form input[type='text'], input[type='email'], textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .main_contact_us .container form{
+        width: 100%;
+    }   
+}

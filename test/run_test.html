@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<style type="text/css">
+		*{
+			font-family: tahoma;
+		}
+		.container_test{
+			width: 90%;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			background-color: #004400;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		#test_left{
+			width: 50%;
+			height: 500px;
+		}
+		#test_right{
+			width: 50%;
+			height: 505px;
+			display: block;
+			margin-left: 15px;
+			padding-left: 10px;
+			background-color: #fff;
+			position: relative;
+			overflow: scroll;
+		}
+		textarea{
+			width: 100%;
+			height: 100%;
+			outline: none;
+			text-align: left;
+			background-color: #fff !important;
+			font-size: 16px;
+		}
+		.button_check{
+			text-align: center;
+			padding: 10px 0;
+		}
+		input{
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="button_check">
+		<input type="button" name="chaythu" value="Chạy thử" onclick="check(document.getElementById('text_test').value)">
+		<input type="button" name="lamlai" value="Làm lại" onclick="reset1();">
+	</div>
+	<div class="container_test">
+		<div id="test_left">
+			<textarea id="text_test" value=""></textarea>
+		</div>
+		<div id="test_right">
+			<div id="result_test">
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var text = document.getElementById('text_test');
+		text.value = ""
+		+"<!DOCTYPE html>"
+		+"\n<html>"
+		+"\n<head>"
+		+"\n<meta charset='utf-8'>"
+		+"\n<meta name='viewport' content='width=device-width, initial-scale=1'>"
+		+"\n<title>Test</title>"
+		+"\n</head>"
+		+"\n<body>\n"
+		+"\n</body>"
+		+"\n</html>";
+		function check(x) {
+			document.getElementById("result_test").innerHTML = x;
+		}
+		function reset1() {
+			document.getElementById("result_test").innerHTML = "";
+			text.value = ""
+			+"<!DOCTYPE html>"
+			+"\n<html>"
+			+"\n<head>"
+			+"\n<meta charset='utf-8'>"
+			+"\n<meta name='viewport' content='width=device-width, initial-scale=1'>"
+			+"\n<title>Test</title>"
+			+"\n</head>"
+			+"\n<body>\n"
+			+"\n</body>"
+			+"\n</html>";
+		}
+	</script>
+</body>
+</html>

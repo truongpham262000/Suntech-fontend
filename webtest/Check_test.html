@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<style type="text/css">
+		.container_test{
+			width: 90%;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			background-color: #004400;
+			border-radius: 5px;
+		}
+		#test_left{
+			width: 50%;
+			height: 250px;
+		}
+		#test_right{
+			width: 50%;
+			height: 255px;
+			display: block;
+			margin-left: 15px;
+			padding-left: 10px;
+			background-color: #fff;
+			overflow-y: scroll;
+		}
+		textarea{
+			width: 100%;
+			height: 100%;
+			outline: none;
+			background-color: #fff !important;
+		}
+		.check_test{
+			width: 100%;
+			text-align: center;
+		}
+		button{
+			padding: 5px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="check_test">
+		<button type="button" onclick="Checktest(document.getElementById('text_test').value);">Chạy thử</button>
+		<button type="button" onclick="Reset_test();">Làm lại</button>
+	</div>
+	<div class="container_test">
+		<div id="test_left">
+			<textarea id="text_test" value="ho" placeholder="Ví dụ: <tagname> nội dung hiển thị </tagname>"></textarea>
+		</div>
+		<div id="test_right">
+			<div id="result_test"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function Checktest(value) {
+			document.getElementById("result_test").innerHTML = value;
+		}
+		function Reset_test() {
+			document.getElementById("text_test").value = "";
+			Checktest("");
+		}
+	</script>
+</body>
+</html>
