@@ -1,0 +1,111 @@
+main .container{
+	display: block;
+	padding-bottom: 50px;
+}
+
+.Main_content_slider_details{
+	display: flex;
+	justify-content: center;
+}
+
+.Main_content_slider_image{
+	width: 50%;
+	padding: 0 20px 30px 0;
+}
+
+.Main_content_details_intro h3{
+	padding-bottom: 20px;
+	font-weight: 600;
+}
+
+.Main_content_details_intro p{
+	padding-top: 20px;
+	font-weight: 600;
+	font-size: 17px;
+}
+
+.Main_content_details_intro p:last-child{
+	padding-bottom: 20px;
+	text-align: justify;
+}
+
+.Main_content_details_option ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 25px;
+	padding-bottom: 30px;
+}
+
+.Main_content_details_option ul li p{
+	font-weight: 600;
+}
+
+.Main_content_details_option select{
+	padding: 5px;
+	outline: none;
+}
+
+.Main_content_details_option i{
+	padding: 0 5px 0 5px;
+}
+
+.Main_content_details_option input{
+	width: 40px;
+	padding: 5px;
+	text-align: center;
+	font-weight: 500;
+}
+
+.Main_content_details_buttons button{
+	margin-right: 20px;
+	padding: 10px 10px;
+	background-color: rgba(0, 0, 0, 0);
+	font-weight: 500;
+	transition: 1s;
+}
+
+.Main_content_details_buttons button:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+.Main_content_details_buttons button i{
+	padding-right: 5px;
+}
+
+ul.Main_content_data_desc{
+	display: flex;
+	align-items: center;
+	background-color: #f8f8f8;
+}
+
+ul.Main_content_data_desc li{
+	padding: 20px 15px;
+	margin: 0;
+	font-weight: 500;
+	color: #727272;
+}
+
+ul.Main_content_data_desc li.active{
+	background-color: #000;
+	color: #fff;
+}
+
+.Main_content_data_desc_details{
+	padding-top: 20px;
+	color: #727272;
+	font-size: 14px;
+}
+
+.Main_content_data_desc_details h4{
+	padding-bottom: 20px;
+}
+
+.Main_content_data_desc_details{
+	display: none;
+}
+
+#amounts{
+	outline: none;
+}

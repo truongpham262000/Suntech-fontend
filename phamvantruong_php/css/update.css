@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: font-family: 'Montserrat', sans-serif;
+}
+
+.main_show_formValidate{
+	display: none;
+}
+
+form{
+	width: 40%;
+	padding: 0 0 3% 0;
+	background-color: #Dddddd;
+	text-align: center;
+}
+
+h3{
+	width: 100%;
+	padding: 20px 0;
+	background-color: #0A2558;
+	text-align: center;
+	color: #fff;
+}
+
+.form_update_catalog{
+	width: 100%;
+	display: flex;
+	line-height: 40px;
+	font-size: 17px;
+	padding: 20px 0;
+}
+
+.form_update_catalog_label{
+	width: 48%;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.form_update_catalog_input{
+	width: 50%;
+	text-align: left;
+}
+
+.form_update_catalog_input input{
+	padding: 5px 5px;
+	outline: none;
+}
+
+.form_update_catalog_button input{
+	padding: 5px 15px;
+	margin-right: 10px;
+	border: 2px solid #00CC00;
+	border-radius: 5px;
+	background-color: #00CC00;
+	color: #fff;
+	font-weight: 500;
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
+.form_update_catalog_button a input{
+	background-color: #EE0000;
+	border-color: #EE0000;
+}
+
+select{
+	width: 60%;
+	padding: 5px;
+	outline: none;
+}

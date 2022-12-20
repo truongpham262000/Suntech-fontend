@@ -1,0 +1,82 @@
+main .container{
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.Main_form_signIn{
+	width: 50%;
+	text-align: left;
+	line-height: 30px;
+	padding: 35px;
+}
+
+.Main_form_signIn h3{
+	padding-bottom: 50px;
+	font-size: 30px;
+}
+
+.Main_form_signIn input{
+	outline: none;
+}
+
+.Main_form_signIn input[type='text'],input[type=password],input[type=email],input[type=tel] {
+	padding: 10px 5px;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.Main_form_signIn input[type='submit']{
+	padding: 10px 30px;
+	letter-spacing: 2px;
+	background-color: rgba(0, 0, 0, 0);
+	font-weight: 500;
+	transition: 1s;
+}
+
+.Main_form_signIn input[type='submit']:hover{
+	background-color: #00c8c8;
+	color: #fff;
+	border-color: #00c8c8;
+}
+
+.Main_form_signIn label a{
+	color: #00c8c8;
+	font-weight: 500;
+}
+
+.Main_form_signIn label a i{
+	padding-left: 5px;
+}
+
+.Main_form_signIn label:last-child{
+	float: right;
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.Main_form_register{
+	border-left: 1px solid #f3f3f3;
+}
+
+.Main_form_register label.checkDK{
+	padding-left: 10px;
+	font-size: 13px;
+}
+
+.Main_form_register label:last-child{
+	padding-top: 35px;
+}
+
+.Main_form_register input[type='submit']{
+	margin-top: 40px;
+}
+
+.result_error{
+	color: red;
+	font-weight: 600;
+	padding-top: 30px;
+	font-size: 13px;
+}
